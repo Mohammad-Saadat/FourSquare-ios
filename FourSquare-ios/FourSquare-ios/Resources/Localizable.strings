@@ -5,3 +5,7 @@
   Created by mohammad on 8/19/20.
   Copyright © 2020 mohammad. All rights reserved.
 */
+"alert_location_dialog" = "Please go to Settings and turn on the permissions";
+"settings_action_title" = "Settings";
+"cancel_action_title" =  "Cancel";
+"empty_list_places" =  "There is no available place yet ^|^";
