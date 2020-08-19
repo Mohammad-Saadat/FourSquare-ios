@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE0A24ED561B008A4820 /* AppDelegate.swift */; };
+		1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */; };
+		1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1624ED561F008A4820 /* Assets.xcassets */; };
+		1184BE1A24ED561F008A4820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1824ED561F008A4820 /* LaunchScreen.storyboard */; };
+		1184BE2824ED5713008A4820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE2724ED5713008A4820 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1184BE0724ED561B008A4820 /* FourSquare-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FourSquare-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1184BE0A24ED561B008A4820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1184BE1424ED561B008A4820 /* FourSquare_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FourSquare_ios.xcdatamodel; sourceTree = "<group>"; };
+		1184BE1624ED561F008A4820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1184BE1924ED561F008A4820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1184BE1B24ED561F008A4820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1184BE2524ED5691008A4820 /* Config-Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Development.xcconfig"; sourceTree = "<group>"; };
+		1184BE2724ED5713008A4820 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1184BE0424ED561B008A4820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1184BDFE24ED561B008A4820 = {
+			isa = PBXGroup;
+			children = (
+				1184BE0924ED561B008A4820 /* FourSquare-ios */,
+				1184BE0824ED561B008A4820 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1184BE0824ED561B008A4820 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1184BE0724ED561B008A4820 /* FourSquare-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1184BE0924ED561B008A4820 /* FourSquare-ios */ = {
+			isa = PBXGroup;
+			children = (
+				1184BE0A24ED561B008A4820 /* AppDelegate.swift */,
+				1184BE2124ED5633008A4820 /* Common */,
+				1184BE2224ED563C008A4820 /* Modules */,
+				1184BE2324ED5644008A4820 /* Resources */,
+			);
+			path = "FourSquare-ios";
+			sourceTree = "<group>";
+		};
+		1184BE2124ED5633008A4820 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1184BE2224ED563C008A4820 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1184BE2324ED5644008A4820 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1184BE1B24ED561F008A4820 /* Info.plist */,
+				1184BE2724ED5713008A4820 /* Localizable.strings */,
+				1184BE1824ED561F008A4820 /* LaunchScreen.storyboard */,
+				1184BE1624ED561F008A4820 /* Assets.xcassets */,
+				1184BE2624ED56F3008A4820 /* EntityModel */,
+				1184BE2424ED5678008A4820 /* Configuration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1184BE2424ED5678008A4820 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1184BE2524ED5691008A4820 /* Config-Development.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		1184BE2624ED56F3008A4820 /* EntityModel */ = {
+			isa = PBXGroup;
+			children = (
+				1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */,
+			);
+			path = EntityModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1184BE0624ED561B008A4820 /* FourSquare-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1184BE1E24ED561F008A4820 /* Build configuration list for PBXNativeTarget "FourSquare-ios" */;
+			buildPhases = (
+				1184BE0324ED561B008A4820 /* Sources */,
+				1184BE0424ED561B008A4820 /* Frameworks */,
+				1184BE0524ED561B008A4820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FourSquare-ios";
+			productName = "FourSquare-ios";
+			productReference = 1184BE0724ED561B008A4820 /* FourSquare-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1184BDFF24ED561B008A4820 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = mohammad;
+				TargetAttributes = {
+					1184BE0624ED561B008A4820 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 1184BE0224ED561B008A4820 /* Build configuration list for PBXProject "FourSquare-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1184BDFE24ED561B008A4820;
+			productRefGroup = 1184BE0824ED561B008A4820 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1184BE0624ED561B008A4820 /* FourSquare-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1184BE0524ED561B008A4820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1184BE1A24ED561F008A4820 /* LaunchScreen.storyboard in Resources */,
+				1184BE2824ED5713008A4820 /* Localizable.strings in Resources */,
+				1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1184BE0324ED561B008A4820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */,
+				1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1184BE1824ED561F008A4820 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1184BE1924ED561F008A4820 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1184BE1C24ED561F008A4820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1184BE1D24ED561F008A4820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1184BE1F24ED561F008A4820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DN2PG7K999;
+				INFOPLIST_FILE = "FourSquare-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roundtableapps.cleanArchitecture.FourSquare-ios.Debug";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1184BE2024ED561F008A4820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DN2PG7K999;
+				INFOPLIST_FILE = "FourSquare-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roundtableapps.cleanArchitecture.FourSquare-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1184BE0224ED561B008A4820 /* Build configuration list for PBXProject "FourSquare-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1184BE1C24ED561F008A4820 /* Debug */,
+				1184BE1D24ED561F008A4820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1184BE1E24ED561F008A4820 /* Build configuration list for PBXNativeTarget "FourSquare-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1184BE1F24ED561F008A4820 /* Debug */,
+				1184BE2024ED561F008A4820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1184BE1424ED561B008A4820 /* FourSquare_ios.xcdatamodel */,
+			);
+			currentVersion = 1184BE1424ED561B008A4820 /* FourSquare_ios.xcdatamodel */;
+			path = FourSquare_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1184BDFF24ED561B008A4820 /* Project object */;
+}
