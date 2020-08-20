@@ -68,9 +68,9 @@ class HomeViewController: UIViewController {
                tableView.didSelectTableView = { [weak self] viewModel in
                    guard let self = self,
                        let itemCellViewModel = viewModel as? ItemCellViewModel,
-                       let place = itemCellViewModel.getModel() as? Place else { return }
-                   Home.log(text: "place = \(place)")
-                   self.router?.navigateToDetail(place: place)
+                       let venue = itemCellViewModel.getModel() as? Venue else { return }
+                   HomeLogger.log(text: "venue = \(venue)")
+//                   self.router?.navigateToDetail(place: place)
                }
            }
        }
