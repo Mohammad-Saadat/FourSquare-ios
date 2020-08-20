@@ -51,7 +51,7 @@ extension DetailInteractor: DetailBusinessLogic {
         self.presenter?.presentFromDB(response: Detail.FromDataBase.Response(venue: venue))
         let params = DetailVenueParams(id: venueId)
         self.presenter?.presentLoading(response: Detail.Loading.Response())
-        self.worker?.fetchDetailPlace(parameters: params)
+        self.worker?.fetchDetailVenues(parameters: params)
             .done { [weak self] response in
                     guard let `self` = self,
                         let venueDetail = response.forSquareDetailObjectresponse?.venueDetail else { return }
