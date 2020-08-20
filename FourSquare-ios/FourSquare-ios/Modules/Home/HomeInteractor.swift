@@ -20,8 +20,14 @@ protocol HomeDataStore {}
 
 class HomeInteractor: HomeDataStore {
     // MARK: - Object lifecycle
-    init() {
+    init(locationManager: LocationManager,
+    worker: TestModuleWorkerLogic,
+    reachability: Reachability) {
         HomeLogger.logInit(owner: String(describing: HomeInteractor.self))
+        self.worker = worker
+        self.locationManager = locationManager
+        self.reachability = reachability
+        self.setDelegates()
     }
     
     // MARK: - Deinit
@@ -34,12 +40,22 @@ class HomeInteractor: HomeDataStore {
     // MARK: Public
     var presenter: HomePresentationLogic?
     var worker: HomeWorkerLogic?
+    
+    // MARK: Private
+    private let locationManager: LocationManager
+    private let reachability: Reachability
 }
 
 // MARK: - Methods
 
 // MARK: Private
-private extension HomeInteractor {}
+private extension HomeInteractor {
+    func setDelegates() {
+//        self.worker.setDelegate(with: self)
+        self.locationManager.setDelegate(with: self)
+        self.reachability.setDelegate(with: self)
+    }
+}
 
 // MARK: Public
 extension HomeInteractor {}
