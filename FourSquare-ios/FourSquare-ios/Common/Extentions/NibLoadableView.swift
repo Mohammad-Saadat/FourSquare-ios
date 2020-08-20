@@ -64,5 +64,3 @@ public extension NibLoadable where Self: UIViewController {
         return Bundle(for: Self.self)
     }
 }
-
-extension UIViewController: NibLoadable {}
