@@ -69,6 +69,8 @@
 		1184BE2824ED5713008A4820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE2724ED5713008A4820 /* Localizable.strings */; };
 		118802BE24EECF82001ADB4E /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802BD24EECF82001ADB4E /* CoreDataService.swift */; };
 		118802C024EED115001ADB4E /* RemoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802BF24EED115001ADB4E /* RemoteObject.swift */; };
+		118802C224EEDA33001ADB4E /* VenueParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802C124EEDA33001ADB4E /* VenueParams.swift */; };
+		118802C424EEDA66001ADB4E /* UserDefaultExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802C324EEDA66001ADB4E /* UserDefaultExtention.swift */; };
 		11AD055A24EECC1500C622E4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD055924EECC1500C622E4 /* LocationManager.swift */; };
 		11AD055D24EECC5100C622E4 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD055C24EECC5100C622E4 /* ReachabilityManager.swift */; };
 		4D3242739449126B9D09BFB7 /* Pods_FourSquare_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54B3B847E6FACFBC938C67B /* Pods_FourSquare_ios.framework */; };
@@ -140,6 +142,8 @@
 		1184BE2724ED5713008A4820 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		118802BD24EECF82001ADB4E /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		118802BF24EED115001ADB4E /* RemoteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObject.swift; sourceTree = "<group>"; };
+		118802C124EEDA33001ADB4E /* VenueParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueParams.swift; sourceTree = "<group>"; };
+		118802C324EEDA66001ADB4E /* UserDefaultExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtention.swift; sourceTree = "<group>"; };
 		11AD055924EECC1500C622E4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		11AD055C24EECC5100C622E4 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		7C60F3B6248D26A1BD3CA57B /* Pods-FourSquare-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-ios.debug.xcconfig"; path = "Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				112DEB5D24EEBEEA006E42AB /* JSONDecoderExtension.swift */,
 				112DEB5F24EEBEFE006E42AB /* JSONEncoderExtension.swift */,
 				112DEB6124EEBF30006E42AB /* UIBezierPathExtension.swift */,
+				118802C324EEDA66001ADB4E /* UserDefaultExtention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				118802BF24EED115001ADB4E /* RemoteObject.swift */,
+				118802C124EEDA33001ADB4E /* VenueParams.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -705,8 +711,10 @@
 				112DEB7324EEC642006E42AB /* CustomMoyaProvider.swift in Sources */,
 				1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */,
 				112DEB7724EEC664006E42AB /* MoyaTarget.swift in Sources */,
+				118802C224EEDA33001ADB4E /* VenueParams.swift in Sources */,
 				112DEB7124EEC60D006E42AB /* BackendError.swift in Sources */,
 				112DEBB024EEC987006E42AB /* HomePresenter.swift in Sources */,
+				118802C424EEDA66001ADB4E /* UserDefaultExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
