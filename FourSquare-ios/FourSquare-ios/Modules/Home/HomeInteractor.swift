@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol HomeBusinessLogic {
     func startHandleLocation(request: Home.Location.Request)
@@ -55,6 +56,32 @@ private extension HomeInteractor {
         self.locationManager.setDelegate(with: self)
         self.reachability.setDelegate(with: self)
     }
+    
+    func fetchPlacesWithParams(latitude: String, longitude: String) {
+        let params = VenueParams(latitude: latitude, longitude: longitude)
+        self.worker.fetchPlaces(params: params)
+    }
+    
+    func checkDistanceForBeyondConstraint(latitude: String, longitude: String, params: VenueParams) {
+        let newCoordinate = CLLocation(latitude: latitude.double, longitude: longitude.double)
+        let oldCoordinate = CLLocation(latitude: params.latitude.double, longitude: params.longitude.double)
+        let distanceInMeters = newCoordinate.distance(from: oldCoordinate)
+        HomeLogger.log(text: "distanceInMeters = \(distanceInMeters)")
+        if distanceInMeters >= 10 {
+            // in success remove all last palces
+            self.fetchPlacesWithParams(latitude: latitude, longitude: longitude)
+        }
+    }
+    
+    func checkPlaceParamsInDisk(latitude: String, longitude: String) {
+        if let params = UserDefaults.standard.venueParams {
+            self.checkDistanceForBeyondConstraint(latitude: latitude,
+                                               longitude: longitude,
+                                               params: params)
+        } else {
+            self.fetchPlacesWithParams(latitude: latitude, longitude: longitude)
+        }
+    }
 }
 
 // MARK: Public
@@ -85,8 +112,8 @@ extension HomeInteractor: HomeWorkerDelegate {
         self.presenter?.hideLoading(response: Home.Loading.Response())
     }
     
-    func recievedFromDataBase(places: [Place]) {
-        self.presenter?.presentData(response: Home.List.Response(places: places))
+    func recievedFromDataBase(places: [Venue]) {
+        self.presenter?.presentData(response: Home.List.Response(venues: places))
     }
 }
 
@@ -95,7 +122,7 @@ extension HomeInteractor: ReachabilityDelegate {
     func statusChangedToNotReachable() {
         if UserDefaults.standard.venueParams != nil {
             let error = NetworkErrors.noNetworkConnectivity
-            let reponse = HomeLogger.ModuleError.Response(error: error)
+            let reponse = Home.ModuleError.Response(error: error)
             self.presenter?.presentError(response: reponse)
         }
     }
