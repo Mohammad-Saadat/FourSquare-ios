@@ -28,6 +28,23 @@
 		112DEB6524EEBF7F006E42AB /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6424EEBF7F006E42AB /* InfoDictionary.swift */; };
 		112DEB6824EEBFA4006E42AB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6724EEBFA4006E42AB /* Logger.swift */; };
 		112DEB6F24EEC005006E42AB /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6E24EEC005006E42AB /* NetworkErrors.swift */; };
+		112DEB7124EEC60D006E42AB /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7024EEC60D006E42AB /* BackendError.swift */; };
+		112DEB7324EEC642006E42AB /* CustomMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7224EEC642006E42AB /* CustomMoyaProvider.swift */; };
+		112DEB7524EEC654006E42AB /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7424EEC654006E42AB /* MoyaService.swift */; };
+		112DEB7724EEC664006E42AB /* MoyaTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7624EEC664006E42AB /* MoyaTarget.swift */; };
+		112DEB7A24EEC68B006E42AB /* AppInfoPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7924EEC68B006E42AB /* AppInfoPlugin.swift */; };
+		112DEB7C24EEC69F006E42AB /* GeneralErrorHandlerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7B24EEC69F006E42AB /* GeneralErrorHandlerPlugin.swift */; };
+		112DEB7E24EEC6AF006E42AB /* NetworkActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7D24EEC6AF006E42AB /* NetworkActivityPlugin.swift */; };
+		112DEB8024EEC6BE006E42AB /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB7F24EEC6BE006E42AB /* NetworkLoggerPlugin.swift */; };
+		112DEB8224EEC6E1006E42AB /* AppInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8124EEC6E1006E42AB /* AppInfoProvider.swift */; };
+		112DEB8424EEC6F1006E42AB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8324EEC6F1006E42AB /* NetworkManager.swift */; };
+		112DEB8624EEC6FE006E42AB /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8524EEC6FE006E42AB /* NetworkManagerProtocol.swift */; };
+		112DEB8824EEC70C006E42AB /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8724EEC70C006E42AB /* RequestProtocol.swift */; };
+		112DEB8A24EEC71B006E42AB /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8924EEC71B006E42AB /* TokenProvider.swift */; };
+		112DEB8C24EEC737006E42AB /* GeneralErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8B24EEC737006E42AB /* GeneralErrors.swift */; };
+		112DEB8F24EEC755006E42AB /* ErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8E24EEC755006E42AB /* ErrorHandlerProtocol.swift */; };
+		112DEB9124EEC762006E42AB /* UnAuthorizedErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB9024EEC762006E42AB /* UnAuthorizedErrorHandler.swift */; };
+		112DEB9424EEC786006E42AB /* ForceUpdateErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB9324EEC786006E42AB /* ForceUpdateErrorHandler.swift */; };
 		1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE0A24ED561B008A4820 /* AppDelegate.swift */; };
 		1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */; };
 		1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1624ED561F008A4820 /* Assets.xcassets */; };
@@ -58,6 +75,23 @@
 		112DEB6424EEBF7F006E42AB /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
 		112DEB6724EEBFA4006E42AB /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		112DEB6E24EEC005006E42AB /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		112DEB7024EEC60D006E42AB /* BackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
+		112DEB7224EEC642006E42AB /* CustomMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMoyaProvider.swift; sourceTree = "<group>"; };
+		112DEB7424EEC654006E42AB /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
+		112DEB7624EEC664006E42AB /* MoyaTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTarget.swift; sourceTree = "<group>"; };
+		112DEB7924EEC68B006E42AB /* AppInfoPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoPlugin.swift; sourceTree = "<group>"; };
+		112DEB7B24EEC69F006E42AB /* GeneralErrorHandlerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralErrorHandlerPlugin.swift; sourceTree = "<group>"; };
+		112DEB7D24EEC6AF006E42AB /* NetworkActivityPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityPlugin.swift; sourceTree = "<group>"; };
+		112DEB7F24EEC6BE006E42AB /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		112DEB8124EEC6E1006E42AB /* AppInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoProvider.swift; sourceTree = "<group>"; };
+		112DEB8324EEC6F1006E42AB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		112DEB8524EEC6FE006E42AB /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		112DEB8724EEC70C006E42AB /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		112DEB8924EEC71B006E42AB /* TokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		112DEB8B24EEC737006E42AB /* GeneralErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralErrors.swift; sourceTree = "<group>"; };
+		112DEB8E24EEC755006E42AB /* ErrorHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerProtocol.swift; sourceTree = "<group>"; };
+		112DEB9024EEC762006E42AB /* UnAuthorizedErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnAuthorizedErrorHandler.swift; sourceTree = "<group>"; };
+		112DEB9324EEC786006E42AB /* ForceUpdateErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdateErrorHandler.swift; sourceTree = "<group>"; };
 		1184BE0724ED561B008A4820 /* FourSquare-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FourSquare-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184BE0A24ED561B008A4820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1184BE1424ED561B008A4820 /* FourSquare_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FourSquare_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -160,9 +194,9 @@
 		112DEB6A24EEBFD3006E42AB /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				112DEB6D24EEBFF5006E42AB /* NetworkManager */,
 				112DEB6B24EEBFE3006E42AB /* Errors */,
 				112DEB6C24EEBFED006E42AB /* Moya */,
+				112DEB6D24EEBFF5006E42AB /* NetworkManager */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -170,7 +204,10 @@
 		112DEB6B24EEBFE3006E42AB /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				112DEB7024EEC60D006E42AB /* BackendError.swift */,
+				112DEB8B24EEC737006E42AB /* GeneralErrors.swift */,
 				112DEB6E24EEC005006E42AB /* NetworkErrors.swift */,
+				112DEB8D24EEC74B006E42AB /* Handlers */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -178,6 +215,10 @@
 		112DEB6C24EEBFED006E42AB /* Moya */ = {
 			isa = PBXGroup;
 			children = (
+				112DEB7224EEC642006E42AB /* CustomMoyaProvider.swift */,
+				112DEB7424EEC654006E42AB /* MoyaService.swift */,
+				112DEB7624EEC664006E42AB /* MoyaTarget.swift */,
+				112DEB7824EEC67E006E42AB /* Plugins */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -185,8 +226,42 @@
 		112DEB6D24EEBFF5006E42AB /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				112DEB8124EEC6E1006E42AB /* AppInfoProvider.swift */,
+				112DEB8324EEC6F1006E42AB /* NetworkManager.swift */,
+				112DEB8524EEC6FE006E42AB /* NetworkManagerProtocol.swift */,
+				112DEB8724EEC70C006E42AB /* RequestProtocol.swift */,
+				112DEB8924EEC71B006E42AB /* TokenProvider.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		112DEB7824EEC67E006E42AB /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB7924EEC68B006E42AB /* AppInfoPlugin.swift */,
+				112DEB7B24EEC69F006E42AB /* GeneralErrorHandlerPlugin.swift */,
+				112DEB7D24EEC6AF006E42AB /* NetworkActivityPlugin.swift */,
+				112DEB7F24EEC6BE006E42AB /* NetworkLoggerPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		112DEB8D24EEC74B006E42AB /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB8E24EEC755006E42AB /* ErrorHandlerProtocol.swift */,
+				112DEB9024EEC762006E42AB /* UnAuthorizedErrorHandler.swift */,
+				112DEB9224EEC77B006E42AB /* ForceUpdateHandler */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		112DEB9224EEC77B006E42AB /* ForceUpdateHandler */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB9324EEC786006E42AB /* ForceUpdateErrorHandler.swift */,
+			);
+			path = ForceUpdateHandler;
 			sourceTree = "<group>";
 		};
 		117ABD3F24EE421900ACDC4A /* TableView */ = {
@@ -407,26 +482,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				112DEB5C24EEBEC7006E42AB /* CALayerExtension.swift in Sources */,
+				112DEB8024EEC6BE006E42AB /* NetworkLoggerPlugin.swift in Sources */,
+				112DEB9124EEC762006E42AB /* UnAuthorizedErrorHandler.swift in Sources */,
 				112DEB5424EEBE12006E42AB /* StringExtention.swift in Sources */,
 				112DEB5E24EEBEEA006E42AB /* JSONDecoderExtension.swift in Sources */,
 				1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */,
+				112DEB7A24EEC68B006E42AB /* AppInfoPlugin.swift in Sources */,
+				112DEB8824EEC70C006E42AB /* RequestProtocol.swift in Sources */,
 				112DEB5824EEBE83006E42AB /* UIColorExtention.swift in Sources */,
 				112DEB4A24EEBBC2006E42AB /* DeletableDataSource.swift in Sources */,
 				112DEB4024EEBB3B006E42AB /* TableViewDataSource.swift in Sources */,
 				112DEB5624EEBE4E006E42AB /* Atomic.swift in Sources */,
+				112DEB9424EEC786006E42AB /* ForceUpdateErrorHandler.swift in Sources */,
 				112DEB6524EEBF7F006E42AB /* InfoDictionary.swift in Sources */,
+				112DEB8A24EEC71B006E42AB /* TokenProvider.swift in Sources */,
 				112DEB4624EEBB76006E42AB /* EmptyListView.swift in Sources */,
 				112DEB5A24EEBEA0006E42AB /* UIViewExtention.swift in Sources */,
 				112DEB4E24EEBBE3006E42AB /* DefaultSectionHeaderFooterView.swift in Sources */,
+				112DEB8624EEC6FE006E42AB /* NetworkManagerProtocol.swift in Sources */,
+				112DEB8224EEC6E1006E42AB /* AppInfoProvider.swift in Sources */,
 				112DEB6024EEBEFE006E42AB /* JSONEncoderExtension.swift in Sources */,
 				112DEB3E24EEBB25006E42AB /* TableView.swift in Sources */,
 				112DEB5224EEBDA8006E42AB /* NibLoadableView.swift in Sources */,
+				112DEB8424EEC6F1006E42AB /* NetworkManager.swift in Sources */,
+				112DEB7E24EEC6AF006E42AB /* NetworkActivityPlugin.swift in Sources */,
+				112DEB8F24EEC755006E42AB /* ErrorHandlerProtocol.swift in Sources */,
 				112DEB6824EEBFA4006E42AB /* Logger.swift in Sources */,
 				112DEB3C24EEBB03006E42AB /* SectionViewModel.swift in Sources */,
+				112DEB7C24EEC69F006E42AB /* GeneralErrorHandlerPlugin.swift in Sources */,
 				112DEB6F24EEC005006E42AB /* NetworkErrors.swift in Sources */,
 				112DEB6224EEBF30006E42AB /* UIBezierPathExtension.swift in Sources */,
+				112DEB7524EEC654006E42AB /* MoyaService.swift in Sources */,
+				112DEB8C24EEC737006E42AB /* GeneralErrors.swift in Sources */,
 				112DEB4224EEBB53006E42AB /* CellViewModel.swift in Sources */,
+				112DEB7324EEC642006E42AB /* CustomMoyaProvider.swift in Sources */,
 				1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */,
+				112DEB7724EEC664006E42AB /* MoyaTarget.swift in Sources */,
+				112DEB7124EEC60D006E42AB /* BackendError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
