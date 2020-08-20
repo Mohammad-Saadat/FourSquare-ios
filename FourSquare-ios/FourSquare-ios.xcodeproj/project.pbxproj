@@ -198,6 +198,7 @@
 /* Begin XCBuildConfiguration section */
 		1184BE1C24ED561F008A4820 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1184BE2524ED5691008A4820 /* Config-Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -258,6 +259,7 @@
 		};
 		1184BE1D24ED561F008A4820 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1184BE2524ED5691008A4820 /* Config-Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -318,6 +320,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DN2PG7K999;
 				INFOPLIST_FILE = "FourSquare-ios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,6 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DN2PG7K999;
 				INFOPLIST_FILE = "FourSquare-ios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
