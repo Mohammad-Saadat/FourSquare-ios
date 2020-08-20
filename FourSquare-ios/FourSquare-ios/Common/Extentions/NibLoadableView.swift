@@ -65,3 +65,4 @@ public extension NibLoadable where Self: UIViewController {
     }
 }
 
+extension UIViewController: NibLoadable {}
