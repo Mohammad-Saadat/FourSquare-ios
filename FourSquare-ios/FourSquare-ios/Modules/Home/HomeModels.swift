@@ -9,10 +9,58 @@
 import UIKit
 
 enum Home {
-    // MARK: Use cases
-    
-    enum Something {
+    enum Location {
         struct Request {
+        }
+        struct Response {
+        }
+        struct ViewModel {
+        }
+    }
+    
+    enum LocationAlert {
+        struct Request {
+        }
+        struct Response {
+        }
+        struct ViewModel {
+        }
+    }
+    
+    enum ModuleError {
+       struct Request {
+        }
+        struct Response {
+            var error: Error
+        }
+        struct ViewModel {
+            var error: Error
+        }
+    }
+    
+    enum Loading {
+       struct Request {
+        }
+        struct Response {
+        }
+        struct ViewModel {
+        }
+    }
+    
+    enum List {
+        struct Request {
+        }
+        struct Response {
+            let places: [Venue]
+        }
+        struct ViewModel {
+            let section: [SectionViewModel]
+        }
+    }
+    
+    enum pagination {
+        struct Request {
+            let currentPage: Int
         }
         struct Response {
         }
