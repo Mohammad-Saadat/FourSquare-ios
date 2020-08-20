@@ -16,4 +16,7 @@ protocol HomeViewControllerFactory {
 
 protocol HomeServiceFactory {
     func makeHomeService() -> HomeService
+    func makeTestModuleCoreDataService() -> CoreDataService
+    func makeTestModuleReachability() -> Reachability
+    func makeTestModuleLocationManager() -> LocationManager
 }

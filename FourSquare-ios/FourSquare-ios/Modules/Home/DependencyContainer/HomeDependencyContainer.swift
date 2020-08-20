@@ -22,6 +22,18 @@ class HomeDependencyContainer: DependencyContainer {
 
 // MARK: - Factory
 extension HomeDependencyContainer: HomeFactory {
+    func makeTestModuleLocationManager() -> LocationManager {
+        return LocationManager()
+    }
+    
+    func makeTestModuleReachability() -> Reachability {
+        return Reachability()
+    }
+    
+    func makeTestModuleCoreDataService() -> CoreDataService {
+        return CoreDataService(context: self.persistentContainer)
+    }
+    
     func makeHomeViewController() -> HomeViewController {
         return HomeViewController(factory: self)
     }
