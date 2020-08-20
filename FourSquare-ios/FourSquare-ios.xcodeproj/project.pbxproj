@@ -67,6 +67,10 @@
 		1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1624ED561F008A4820 /* Assets.xcassets */; };
 		1184BE1A24ED561F008A4820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1824ED561F008A4820 /* LaunchScreen.storyboard */; };
 		1184BE2824ED5713008A4820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE2724ED5713008A4820 /* Localizable.strings */; };
+		118802BE24EECF82001ADB4E /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802BD24EECF82001ADB4E /* CoreDataService.swift */; };
+		118802C024EED115001ADB4E /* RemoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802BF24EED115001ADB4E /* RemoteObject.swift */; };
+		11AD055A24EECC1500C622E4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD055924EECC1500C622E4 /* LocationManager.swift */; };
+		11AD055D24EECC5100C622E4 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD055C24EECC5100C622E4 /* ReachabilityManager.swift */; };
 		4D3242739449126B9D09BFB7 /* Pods_FourSquare_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54B3B847E6FACFBC938C67B /* Pods_FourSquare_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +138,10 @@
 		1184BE1B24ED561F008A4820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1184BE2524ED5691008A4820 /* Config-Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Development.xcconfig"; sourceTree = "<group>"; };
 		1184BE2724ED5713008A4820 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		118802BD24EECF82001ADB4E /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		118802BF24EED115001ADB4E /* RemoteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObject.swift; sourceTree = "<group>"; };
+		11AD055924EECC1500C622E4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		11AD055C24EECC5100C622E4 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		7C60F3B6248D26A1BD3CA57B /* Pods-FourSquare-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-ios.debug.xcconfig"; path = "Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		B54B3B847E6FACFBC938C67B /* Pods_FourSquare_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAF57D85BD893EA472B7D71 /* Pods-FourSquare-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-ios.release.xcconfig"; path = "Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -342,7 +350,6 @@
 				112DEBA524EEC987006E42AB /* HomeWorker.swift */,
 				112DEBBB24EEC994006E42AB /* DataModel */,
 				112DEBBC24EEC99F006E42AB /* DependencyContainer */,
-				112DEBBD24EEC9A8006E42AB /* Manager */,
 				112DEBBE24EEC9B9006E42AB /* Service */,
 				112DEBBF24EEC9C1006E42AB /* Views */,
 			);
@@ -352,6 +359,7 @@
 		112DEBBB24EEC994006E42AB /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				118802BF24EED115001ADB4E /* RemoteObject.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -365,11 +373,12 @@
 			path = DependencyContainer;
 			sourceTree = "<group>";
 		};
-		112DEBBD24EEC9A8006E42AB /* Manager */ = {
+		112DEBBD24EEC9A8006E42AB /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
+				11AD055924EECC1500C622E4 /* LocationManager.swift */,
 			);
-			path = Manager;
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		112DEBBE24EEC9B9006E42AB /* Service */ = {
@@ -377,6 +386,7 @@
 			children = (
 				112DEBA724EEC987006E42AB /* HomeEndpoint.swift */,
 				112DEBAD24EEC987006E42AB /* HomeService.swift */,
+				118802BD24EECF82001ADB4E /* CoreDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -443,6 +453,8 @@
 		1184BE2124ED5633008A4820 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				118802B024EECE5E001ADB4E /* DataModel */,
+				11AD055B24EECC4600C622E4 /* ReachabilityManager */,
 				112DEBC024EECA0F006E42AB /* Appearence */,
 				1184BE0A24ED561B008A4820 /* AppDelegate.swift */,
 				112DEB9F24EEC897006E42AB /* CustomClasses */,
@@ -452,6 +464,7 @@
 				112DEB6624EEBF9A006E42AB /* Logger */,
 				112DEB6924EEBFC9006E42AB /* Remote */,
 				117ABD3F24EE421900ACDC4A /* TableView */,
+				112DEBBD24EEC9A8006E42AB /* LocationManager */,
 				112DEB9C24EEC85F006E42AB /* WindowManager */,
 			);
 			path = Common;
@@ -492,6 +505,21 @@
 				1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */,
 			);
 			path = EntityModel;
+			sourceTree = "<group>";
+		};
+		118802B024EECE5E001ADB4E /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		11AD055B24EECC4600C622E4 /* ReachabilityManager */ = {
+			isa = PBXGroup;
+			children = (
+				11AD055C24EECC5100C622E4 /* ReachabilityManager.swift */,
+			);
+			path = ReachabilityManager;
 			sourceTree = "<group>";
 		};
 		1A15204456EFE9DA40EC8321 /* Pods */ = {
@@ -634,15 +662,18 @@
 				112DEB5824EEBE83006E42AB /* UIColorExtention.swift in Sources */,
 				112DEB4A24EEBBC2006E42AB /* DeletableDataSource.swift in Sources */,
 				112DEBB224EEC987006E42AB /* HomeRouter.swift in Sources */,
+				118802BE24EECF82001ADB4E /* CoreDataService.swift in Sources */,
 				112DEBAF24EEC987006E42AB /* HomeFactory.swift in Sources */,
 				112DEB4024EEBB3B006E42AB /* TableViewDataSource.swift in Sources */,
 				112DEB5624EEBE4E006E42AB /* Atomic.swift in Sources */,
+				11AD055D24EECC5100C622E4 /* ReachabilityManager.swift in Sources */,
 				112DEB9424EEC786006E42AB /* ForceUpdateErrorHandler.swift in Sources */,
 				112DEBB324EEC987006E42AB /* HomeEndpoint.swift in Sources */,
 				112DEB6524EEBF7F006E42AB /* InfoDictionary.swift in Sources */,
 				112DEB8A24EEC71B006E42AB /* TokenProvider.swift in Sources */,
 				112DEB4624EEBB76006E42AB /* EmptyListView.swift in Sources */,
 				112DEBC224EECA1B006E42AB /* Appearence.swift in Sources */,
+				118802C024EED115001ADB4E /* RemoteObject.swift in Sources */,
 				112DEB5A24EEBEA0006E42AB /* UIViewExtention.swift in Sources */,
 				112DEB9E24EEC870006E42AB /* WindowManager.swift in Sources */,
 				112DEB4E24EEBBE3006E42AB /* DefaultSectionHeaderFooterView.swift in Sources */,
@@ -668,6 +699,7 @@
 				112DEB7524EEC654006E42AB /* MoyaService.swift in Sources */,
 				112DEBB524EEC987006E42AB /* HomeViewController.swift in Sources */,
 				112DEBB424EEC987006E42AB /* HomeModels.swift in Sources */,
+				11AD055A24EECC1500C622E4 /* LocationManager.swift in Sources */,
 				112DEB8C24EEC737006E42AB /* GeneralErrors.swift in Sources */,
 				112DEB4224EEBB53006E42AB /* CellViewModel.swift in Sources */,
 				112DEB7324EEC642006E42AB /* CustomMoyaProvider.swift in Sources */,
