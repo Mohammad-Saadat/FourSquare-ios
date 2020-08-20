@@ -73,6 +73,10 @@
 		118802C424EEDA66001ADB4E /* UserDefaultExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802C324EEDA66001ADB4E /* UserDefaultExtention.swift */; };
 		118802C624EEDD00001ADB4E /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802C524EEDD00001ADB4E /* UIViewControllerExtention.swift */; };
 		118802C824EEDDB9001ADB4E /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802C724EEDDB9001ADB4E /* UIAlertController.swift */; };
+		118802D124EEDFAA001ADB4E /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802CE24EEDFAA001ADB4E /* ItemTableViewCell.swift */; };
+		118802D224EEDFAA001ADB4E /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118802CF24EEDFAA001ADB4E /* ItemTableViewCell.xib */; };
+		118802D324EEDFAA001ADB4E /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802D024EEDFAA001ADB4E /* ItemCellViewModel.swift */; };
+		118802D524EEE02A001ADB4E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118802D424EEE02A001ADB4E /* UIImageViewExtension.swift */; };
 		11AD055A24EECC1500C622E4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD055924EECC1500C622E4 /* LocationManager.swift */; };
 		11AD055D24EECC5100C622E4 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD055C24EECC5100C622E4 /* ReachabilityManager.swift */; };
 		4D3242739449126B9D09BFB7 /* Pods_FourSquare_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54B3B847E6FACFBC938C67B /* Pods_FourSquare_ios.framework */; };
@@ -148,6 +152,10 @@
 		118802C324EEDA66001ADB4E /* UserDefaultExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtention.swift; sourceTree = "<group>"; };
 		118802C524EEDD00001ADB4E /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		118802C724EEDDB9001ADB4E /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		118802CE24EEDFAA001ADB4E /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		118802CF24EEDFAA001ADB4E /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		118802D024EEDFAA001ADB4E /* ItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
+		118802D424EEE02A001ADB4E /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		11AD055924EECC1500C622E4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		11AD055C24EECC5100C622E4 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		7C60F3B6248D26A1BD3CA57B /* Pods-FourSquare-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-ios.debug.xcconfig"; path = "Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 				118802C324EEDA66001ADB4E /* UserDefaultExtention.swift */,
 				118802C524EEDD00001ADB4E /* UIViewControllerExtention.swift */,
 				118802C724EEDDB9001ADB4E /* UIAlertController.swift */,
+				118802D424EEE02A001ADB4E /* UIImageViewExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 			children = (
 				112DEBA924EEC987006E42AB /* HomeViewController.swift */,
 				112DEBAC24EEC987006E42AB /* HomeViewController.xib */,
+				118802C924EEDF8B001ADB4E /* ItemTableViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,6 +536,16 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		118802C924EEDF8B001ADB4E /* ItemTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				118802D024EEDFAA001ADB4E /* ItemCellViewModel.swift */,
+				118802CE24EEDFAA001ADB4E /* ItemTableViewCell.swift */,
+				118802CF24EEDFAA001ADB4E /* ItemTableViewCell.xib */,
+			);
+			path = ItemTableViewCell;
+			sourceTree = "<group>";
+		};
 		11AD055B24EECC4600C622E4 /* ReachabilityManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +628,7 @@
 				1184BE1A24ED561F008A4820 /* LaunchScreen.storyboard in Resources */,
 				1184BE2824ED5713008A4820 /* Localizable.strings in Resources */,
 				1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */,
+				118802D224EEDFAA001ADB4E /* ItemTableViewCell.xib in Resources */,
 				112DEBB824EEC987006E42AB /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,12 +695,14 @@
 				112DEB5824EEBE83006E42AB /* UIColorExtention.swift in Sources */,
 				112DEB4A24EEBBC2006E42AB /* DeletableDataSource.swift in Sources */,
 				112DEBB224EEC987006E42AB /* HomeRouter.swift in Sources */,
+				118802D324EEDFAA001ADB4E /* ItemCellViewModel.swift in Sources */,
 				118802BE24EECF82001ADB4E /* CoreDataService.swift in Sources */,
 				112DEBAF24EEC987006E42AB /* HomeFactory.swift in Sources */,
 				112DEB4024EEBB3B006E42AB /* TableViewDataSource.swift in Sources */,
 				112DEB5624EEBE4E006E42AB /* Atomic.swift in Sources */,
 				11AD055D24EECC5100C622E4 /* ReachabilityManager.swift in Sources */,
 				112DEB9424EEC786006E42AB /* ForceUpdateErrorHandler.swift in Sources */,
+				118802D124EEDFAA001ADB4E /* ItemTableViewCell.swift in Sources */,
 				112DEBB324EEC987006E42AB /* HomeEndpoint.swift in Sources */,
 				112DEB6524EEBF7F006E42AB /* InfoDictionary.swift in Sources */,
 				112DEB8A24EEC71B006E42AB /* TokenProvider.swift in Sources */,
@@ -709,6 +732,7 @@
 				112DEB3C24EEBB03006E42AB /* SectionViewModel.swift in Sources */,
 				112DEB7C24EEC69F006E42AB /* GeneralErrorHandlerPlugin.swift in Sources */,
 				112DEB6F24EEC005006E42AB /* NetworkErrors.swift in Sources */,
+				118802D524EEE02A001ADB4E /* UIImageViewExtension.swift in Sources */,
 				112DEB6224EEBF30006E42AB /* UIBezierPathExtension.swift in Sources */,
 				112DEB7524EEC654006E42AB /* MoyaService.swift in Sources */,
 				112DEBB524EEC987006E42AB /* HomeViewController.swift in Sources */,
