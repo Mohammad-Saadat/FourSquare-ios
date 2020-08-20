@@ -9,31 +9,34 @@
 import Foundation
 
 enum HomeEndpoint {
-//    case something
+    case getVenues(params: VenueParams)
 }
 
 extension HomeEndpoint: RequestProtocol {
     
     public var relativePath: String {
-//        switch self {
-//        case .something: return "/"
-//        }
-        return "/"
+        switch self {
+        case .getVenues: return "/venues/explore"
+        }
     }
     
     public var method: HTTPMethod {
-//        switch self {
-//        case .something: return .get
-//        }
-        return .get
+        switch self {
+        case .getVenues: return .get
+        }
     }
     
     public var requestType: RequestType {
-//        switch self {
-//        case .something:
-//            return .requestPlain
-//        }
-        return .requestPlain
+        switch self {
+        case .getVenues(let params):
+            let parameters: [String: Any] = ["client_id": params.clientId,
+                                             "client_secret": params.clientSecret,
+                                             "v": params.v,
+                                             "ll": params.ll,
+                                             "limit": params.limit,
+                                             "offset": params.offset]
+            return .requestParameters(urlParameters: parameters)
+        }
     }
     
     public var headers: [String: String]? {
