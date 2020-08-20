@@ -32,6 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let frame = UIScreen.main.bounds
+        self.window = UIWindow(frame: frame)
+        self.window?.rootViewController = setInitialization()
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 }
@@ -42,5 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     class func getInstance() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate // swiftlint:disable:this force_cast
+    }
+    
+    func setInitialization() -> UIViewController {
+        let dc = HomeDependencyContainer()
+        let homeVC = dc.makeHomeViewController()
+        let navVc = CustomNavigationController(rootViewController: homeVC)
+        return navVc
     }
 }

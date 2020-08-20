@@ -506,18 +506,18 @@
 		1184BE2124ED5633008A4820 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				118802B024EECE5E001ADB4E /* DataModel */,
-				11AD055B24EECC4600C622E4 /* ReachabilityManager */,
-				112DEBC024EECA0F006E42AB /* Appearence */,
 				1184BE0A24ED561B008A4820 /* AppDelegate.swift */,
+				112DEBC024EECA0F006E42AB /* Appearence */,
 				112DEB9F24EEC897006E42AB /* CustomClasses */,
+				118802B024EECE5E001ADB4E /* DataModel */,
 				112DEB9624EEC7C8006E42AB /* DependencyContainer */,
 				112DEB5024EEBD94006E42AB /* Extentions */,
 				112DEB6324EEBF73006E42AB /* Helper */,
+				112DEBBD24EEC9A8006E42AB /* LocationManager */,
 				112DEB6624EEBF9A006E42AB /* Logger */,
+				11AD055B24EECC4600C622E4 /* ReachabilityManager */,
 				112DEB6924EEBFC9006E42AB /* Remote */,
 				117ABD3F24EE421900ACDC4A /* TableView */,
-				112DEBBD24EEC9A8006E42AB /* LocationManager */,
 				112DEB9C24EEC85F006E42AB /* WindowManager */,
 			);
 			path = Common;

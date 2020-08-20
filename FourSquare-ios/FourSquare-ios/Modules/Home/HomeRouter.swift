@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol HomeRoutingLogic {
-    //    func navigateToSomewhere()
+    func navigateToDetail(venue: Venue)
 }
 
 protocol HomeDataPassing {
@@ -45,4 +45,9 @@ extension HomeRouter {}
 // MARK: - Routin Logic
 extension HomeRouter: HomeRoutingLogic {
     // MARK: Navigation
+    func navigateToDetail(venue: Venue) {
+        let dependencyContainer = DetailDependencyContainer()
+        let detailVC = dependencyContainer.makeDetailViewController(venue: venue)
+        self.viewController?.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }

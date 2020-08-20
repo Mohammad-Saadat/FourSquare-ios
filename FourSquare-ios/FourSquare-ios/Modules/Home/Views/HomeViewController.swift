@@ -70,7 +70,7 @@ class HomeViewController: UIViewController {
                        let itemCellViewModel = viewModel as? ItemCellViewModel,
                        let venue = itemCellViewModel.getModel() as? Venue else { return }
                    HomeLogger.log(text: "venue = \(venue)")
-//                   self.router?.navigateToDetail(place: place)
+                   self.router?.navigateToDetail(venue: venue)
                }
            }
        }
