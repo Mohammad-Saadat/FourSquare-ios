@@ -20,6 +20,9 @@ protocol HomeWorkerDelegate: class {
 
 protocol HomeWorkerLogic {
     func setDelegate(with delegate: HomeWorkerDelegate)
+    func fetchPlaces(params: VenueParams)
+    func fetchPlacesFromDB()
+    func fetchForPagination(params: VenueParams)
 }
 
 class HomeWorker {
@@ -61,12 +64,98 @@ class HomeWorker {
 // MARK: - Methods
 
 // MARK: Private
-private extension HomeWorker {}
+private extension HomeWorker {
+    func fetchFromRemote(params: VenueParams) {
+        self.remoteCallInprogress.mutate { $0 = true }
+        self.delegate?.startRemoteIndicator()
+        //
+        service.getVenuesFromRemote(params: params)
+            .get{ [weak self] result in
+                guard let `self` = self else { return }
+                try self.coreDataService.deleteAllRecords()
+        }
+        .get { [weak self] result in
+            guard let `self` = self,
+                let items = result.forSquareObjectresponse?.groups?.first?.items else { return }
+            let venus = items.compactMap { $0.venue }
+            HomeLogger.log(text: "venus = \(venus)")
+            try self.coreDataService.save(with: venus)
+        }
+        .done { _ in
+            UserDefaults.standard.venueParams = params
+        }
+        .catch { [weak self] error in
+            guard let `self` = self else { return }
+            HomeLogger.log(text: "error = \(error)")
+            self.delegate?.handeleError(error: error)
+        }
+        .finally { [weak self] in
+            guard let `self` = self else { return }
+            self.delegate?.stopRemoteIndicator()
+            self.remoteCallInprogress.mutate { $0 = false }
+        }
+    }
+    
+    func fetchFromDataBase() {
+        do {
+            let persons = try self.coreDataService.fetchAllData()
+            self.delegate?.recievedFromDataBase(places: persons)
+        } catch {
+            HomeLogger.log(text: "error in fetchFromDataBase = \(error)")
+            self.delegate?.handeleError(error: error)
+        }
+    }
+    
+    func checkConditionForGetRemoteData(params: VenueParams) {
+        if getFromRemoteWithActiveConnection {
+            fetchFromRemote(params: params)
+        } else {
+            if !self.reachability.isReachable() {
+                delegate?.handeleError(error: NetworkErrors.noNetworkConnectivity)
+            }
+        }
+    }
+}
 
 // MARK: - Worker Logic
 extension HomeWorker: HomeWorkerLogic {
+    func fetchForPagination(params: VenueParams) {
+        self.remoteCallInprogress.mutate { $0 = true }
+        self.delegate?.startFooterIndicator()
+        
+        service.getVenuesFromRemote(params: params)
+            .get { [weak self] result in
+                guard let `self` = self,
+                    let items = result.forSquareObjectresponse?.groups?.first?.items else { return }
+                let venus = items.compactMap { $0.venue }
+                HomeLogger.log(text: "venus = \(venus)")
+                try self.coreDataService.save(with: venus)
+        }
+        .done { _ in
+            UserDefaults.standard.venueParams = params
+        }
+        .catch { [weak self] error in
+            guard let `self` = self else { return }
+            HomeLogger.log(text: "error = \(error)")
+            self.delegate?.handeleError(error: error)
+        }
+        .finally { [weak self] in
+            guard let `self` = self else { return }
+            self.delegate?.stopFooterIndicator()
+            self.remoteCallInprogress.mutate { $0 = false }
+        }
+    }
+    
     func setDelegate(with delegate: HomeWorkerDelegate) {
         self.delegate = delegate
+    }
+    
+    func fetchPlaces(params: VenueParams) {
+        checkConditionForGetRemoteData(params: params)
+    }
+    
+    func fetchPlacesFromDB() {
+        fetchFromDataBase()
     }
 }
 
