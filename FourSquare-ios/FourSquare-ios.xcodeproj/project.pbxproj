@@ -25,6 +25,7 @@
 		112DEB5E24EEBEEA006E42AB /* JSONDecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB5D24EEBEEA006E42AB /* JSONDecoderExtension.swift */; };
 		112DEB6024EEBEFE006E42AB /* JSONEncoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB5F24EEBEFE006E42AB /* JSONEncoderExtension.swift */; };
 		112DEB6224EEBF30006E42AB /* UIBezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6124EEBF30006E42AB /* UIBezierPathExtension.swift */; };
+		112DEB6524EEBF7F006E42AB /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6424EEBF7F006E42AB /* InfoDictionary.swift */; };
 		1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE0A24ED561B008A4820 /* AppDelegate.swift */; };
 		1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */; };
 		1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1624ED561F008A4820 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		112DEB5D24EEBEEA006E42AB /* JSONDecoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtension.swift; sourceTree = "<group>"; };
 		112DEB5F24EEBEFE006E42AB /* JSONEncoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderExtension.swift; sourceTree = "<group>"; };
 		112DEB6124EEBF30006E42AB /* UIBezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtension.swift; sourceTree = "<group>"; };
+		112DEB6424EEBF7F006E42AB /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
 		1184BE0724ED561B008A4820 /* FourSquare-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FourSquare-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184BE0A24ED561B008A4820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1184BE1424ED561B008A4820 /* FourSquare_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FourSquare_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		112DEB6324EEBF73006E42AB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB6424EEBF7F006E42AB /* InfoDictionary.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		117ABD3F24EE421900ACDC4A /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 		1184BE2124ED5633008A4820 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				112DEB6324EEBF73006E42AB /* Helper */,
 				1184BE0A24ED561B008A4820 /* AppDelegate.swift */,
 				112DEB5024EEBD94006E42AB /* Extentions */,
 				117ABD3F24EE421900ACDC4A /* TableView */,
@@ -281,6 +292,7 @@
 				112DEB4A24EEBBC2006E42AB /* DeletableDataSource.swift in Sources */,
 				112DEB4024EEBB3B006E42AB /* TableViewDataSource.swift in Sources */,
 				112DEB5624EEBE4E006E42AB /* Atomic.swift in Sources */,
+				112DEB6524EEBF7F006E42AB /* InfoDictionary.swift in Sources */,
 				112DEB4624EEBB76006E42AB /* EmptyListView.swift in Sources */,
 				112DEB5A24EEBEA0006E42AB /* UIViewExtention.swift in Sources */,
 				112DEB4E24EEBBE3006E42AB /* DefaultSectionHeaderFooterView.swift in Sources */,
