@@ -9,7 +9,11 @@
 import UIKit
 
 protocol HomeBusinessLogic {
-    //    func doSomething(request: Home.Something.Request)
+    func startHandleLocation(request: Home.Location.Request)
+    func settingButtonTappedOnLocationAlert(request: Home.LocationAlert.Request)
+    func fetchNextPage(request: Home.pagination.Request)
+    func getPlaceFromDB(request: Home.List.Request)
+    func refreshPage(request: Home.List.Request)
 }
 
 protocol HomeDataStore {}
