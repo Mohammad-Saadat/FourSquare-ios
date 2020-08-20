@@ -45,6 +45,10 @@
 		112DEB8F24EEC755006E42AB /* ErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB8E24EEC755006E42AB /* ErrorHandlerProtocol.swift */; };
 		112DEB9124EEC762006E42AB /* UnAuthorizedErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB9024EEC762006E42AB /* UnAuthorizedErrorHandler.swift */; };
 		112DEB9424EEC786006E42AB /* ForceUpdateErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB9324EEC786006E42AB /* ForceUpdateErrorHandler.swift */; };
+		112DEB9824EEC7D7006E42AB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB9724EEC7D7006E42AB /* DependencyContainer.swift */; };
+		112DEB9B24EEC836006E42AB /* NeworkManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB9A24EEC836006E42AB /* NeworkManagerFactory.swift */; };
+		112DEB9E24EEC870006E42AB /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB9D24EEC870006E42AB /* WindowManager.swift */; };
+		112DEBA124EEC8A2006E42AB /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEBA024EEC8A2006E42AB /* CustomNavigationController.swift */; };
 		1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE0A24ED561B008A4820 /* AppDelegate.swift */; };
 		1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */; };
 		1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1624ED561F008A4820 /* Assets.xcassets */; };
@@ -92,6 +96,10 @@
 		112DEB8E24EEC755006E42AB /* ErrorHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerProtocol.swift; sourceTree = "<group>"; };
 		112DEB9024EEC762006E42AB /* UnAuthorizedErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnAuthorizedErrorHandler.swift; sourceTree = "<group>"; };
 		112DEB9324EEC786006E42AB /* ForceUpdateErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdateErrorHandler.swift; sourceTree = "<group>"; };
+		112DEB9724EEC7D7006E42AB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		112DEB9A24EEC836006E42AB /* NeworkManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeworkManagerFactory.swift; sourceTree = "<group>"; };
+		112DEB9D24EEC870006E42AB /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		112DEBA024EEC8A2006E42AB /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		1184BE0724ED561B008A4820 /* FourSquare-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FourSquare-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184BE0A24ED561B008A4820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1184BE1424ED561B008A4820 /* FourSquare_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FourSquare_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 		112DEB6924EEBFC9006E42AB /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				112DEB9924EEC826006E42AB /* FourSquareNetwork */,
 				112DEB6A24EEBFD3006E42AB /* NetworkLayer */,
 			);
 			path = Remote;
@@ -264,6 +273,38 @@
 			path = ForceUpdateHandler;
 			sourceTree = "<group>";
 		};
+		112DEB9624EEC7C8006E42AB /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB9724EEC7D7006E42AB /* DependencyContainer.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		112DEB9924EEC826006E42AB /* FourSquareNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB9A24EEC836006E42AB /* NeworkManagerFactory.swift */,
+			);
+			path = FourSquareNetwork;
+			sourceTree = "<group>";
+		};
+		112DEB9C24EEC85F006E42AB /* WindowManager */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB9D24EEC870006E42AB /* WindowManager.swift */,
+			);
+			path = WindowManager;
+			sourceTree = "<group>";
+		};
+		112DEB9F24EEC897006E42AB /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				112DEBA024EEC8A2006E42AB /* CustomNavigationController.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
 		117ABD3F24EE421900ACDC4A /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,11 +351,14 @@
 			isa = PBXGroup;
 			children = (
 				1184BE0A24ED561B008A4820 /* AppDelegate.swift */,
+				112DEB9F24EEC897006E42AB /* CustomClasses */,
+				112DEB9624EEC7C8006E42AB /* DependencyContainer */,
 				112DEB5024EEBD94006E42AB /* Extentions */,
 				112DEB6324EEBF73006E42AB /* Helper */,
 				112DEB6624EEBF9A006E42AB /* Logger */,
 				112DEB6924EEBFC9006E42AB /* Remote */,
 				117ABD3F24EE421900ACDC4A /* TableView */,
+				112DEB9C24EEC85F006E42AB /* WindowManager */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -487,6 +531,7 @@
 				112DEB5424EEBE12006E42AB /* StringExtention.swift in Sources */,
 				112DEB5E24EEBEEA006E42AB /* JSONDecoderExtension.swift in Sources */,
 				1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */,
+				112DEBA124EEC8A2006E42AB /* CustomNavigationController.swift in Sources */,
 				112DEB7A24EEC68B006E42AB /* AppInfoPlugin.swift in Sources */,
 				112DEB8824EEC70C006E42AB /* RequestProtocol.swift in Sources */,
 				112DEB5824EEBE83006E42AB /* UIColorExtention.swift in Sources */,
@@ -498,10 +543,13 @@
 				112DEB8A24EEC71B006E42AB /* TokenProvider.swift in Sources */,
 				112DEB4624EEBB76006E42AB /* EmptyListView.swift in Sources */,
 				112DEB5A24EEBEA0006E42AB /* UIViewExtention.swift in Sources */,
+				112DEB9E24EEC870006E42AB /* WindowManager.swift in Sources */,
 				112DEB4E24EEBBE3006E42AB /* DefaultSectionHeaderFooterView.swift in Sources */,
 				112DEB8624EEC6FE006E42AB /* NetworkManagerProtocol.swift in Sources */,
+				112DEB9824EEC7D7006E42AB /* DependencyContainer.swift in Sources */,
 				112DEB8224EEC6E1006E42AB /* AppInfoProvider.swift in Sources */,
 				112DEB6024EEBEFE006E42AB /* JSONEncoderExtension.swift in Sources */,
+				112DEB9B24EEC836006E42AB /* NeworkManagerFactory.swift in Sources */,
 				112DEB3E24EEBB25006E42AB /* TableView.swift in Sources */,
 				112DEB5224EEBDA8006E42AB /* NibLoadableView.swift in Sources */,
 				112DEB8424EEC6F1006E42AB /* NetworkManager.swift in Sources */,
