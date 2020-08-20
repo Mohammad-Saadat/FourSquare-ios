@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,11 +26,14 @@
 		112DEB6024EEBEFE006E42AB /* JSONEncoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB5F24EEBEFE006E42AB /* JSONEncoderExtension.swift */; };
 		112DEB6224EEBF30006E42AB /* UIBezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6124EEBF30006E42AB /* UIBezierPathExtension.swift */; };
 		112DEB6524EEBF7F006E42AB /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6424EEBF7F006E42AB /* InfoDictionary.swift */; };
+		112DEB6824EEBFA4006E42AB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6724EEBFA4006E42AB /* Logger.swift */; };
+		112DEB6F24EEC005006E42AB /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DEB6E24EEC005006E42AB /* NetworkErrors.swift */; };
 		1184BE0B24ED561B008A4820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE0A24ED561B008A4820 /* AppDelegate.swift */; };
 		1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1184BE1324ED561B008A4820 /* FourSquare_ios.xcdatamodeld */; };
 		1184BE1724ED561F008A4820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1624ED561F008A4820 /* Assets.xcassets */; };
 		1184BE1A24ED561F008A4820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE1824ED561F008A4820 /* LaunchScreen.storyboard */; };
 		1184BE2824ED5713008A4820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1184BE2724ED5713008A4820 /* Localizable.strings */; };
+		4D3242739449126B9D09BFB7 /* Pods_FourSquare_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54B3B847E6FACFBC938C67B /* Pods_FourSquare_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,8 @@
 		112DEB5F24EEBEFE006E42AB /* JSONEncoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderExtension.swift; sourceTree = "<group>"; };
 		112DEB6124EEBF30006E42AB /* UIBezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtension.swift; sourceTree = "<group>"; };
 		112DEB6424EEBF7F006E42AB /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
+		112DEB6724EEBFA4006E42AB /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		112DEB6E24EEC005006E42AB /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		1184BE0724ED561B008A4820 /* FourSquare-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FourSquare-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184BE0A24ED561B008A4820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1184BE1424ED561B008A4820 /* FourSquare_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FourSquare_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -61,6 +66,9 @@
 		1184BE1B24ED561F008A4820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1184BE2524ED5691008A4820 /* Config-Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Development.xcconfig"; sourceTree = "<group>"; };
 		1184BE2724ED5713008A4820 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		7C60F3B6248D26A1BD3CA57B /* Pods-FourSquare-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-ios.debug.xcconfig"; path = "Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		B54B3B847E6FACFBC938C67B /* Pods_FourSquare_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCAF57D85BD893EA472B7D71 /* Pods-FourSquare-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-ios.release.xcconfig"; path = "Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +76,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3242739449126B9D09BFB7 /* Pods_FourSquare_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00DD0923543170EEB01A5322 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B54B3B847E6FACFBC938C67B /* Pods_FourSquare_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		112DEB4324EEBB67006E42AB /* EmptyList */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +141,54 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		112DEB6624EEBF9A006E42AB /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB6724EEBFA4006E42AB /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		112DEB6924EEBFC9006E42AB /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB6A24EEBFD3006E42AB /* NetworkLayer */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		112DEB6A24EEBFD3006E42AB /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB6D24EEBFF5006E42AB /* NetworkManager */,
+				112DEB6B24EEBFE3006E42AB /* Errors */,
+				112DEB6C24EEBFED006E42AB /* Moya */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		112DEB6B24EEBFE3006E42AB /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				112DEB6E24EEC005006E42AB /* NetworkErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		112DEB6C24EEBFED006E42AB /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		112DEB6D24EEBFF5006E42AB /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		117ABD3F24EE421900ACDC4A /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +208,8 @@
 			children = (
 				1184BE0924ED561B008A4820 /* FourSquare-ios */,
 				1184BE0824ED561B008A4820 /* Products */,
+				1A15204456EFE9DA40EC8321 /* Pods */,
+				00DD0923543170EEB01A5322 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,9 +234,11 @@
 		1184BE2124ED5633008A4820 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				112DEB6324EEBF73006E42AB /* Helper */,
 				1184BE0A24ED561B008A4820 /* AppDelegate.swift */,
 				112DEB5024EEBD94006E42AB /* Extentions */,
+				112DEB6324EEBF73006E42AB /* Helper */,
+				112DEB6624EEBF9A006E42AB /* Logger */,
+				112DEB6924EEBFC9006E42AB /* Remote */,
 				117ABD3F24EE421900ACDC4A /* TableView */,
 			);
 			path = Common;
@@ -211,6 +280,15 @@
 			path = EntityModel;
 			sourceTree = "<group>";
 		};
+		1A15204456EFE9DA40EC8321 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C60F3B6248D26A1BD3CA57B /* Pods-FourSquare-ios.debug.xcconfig */,
+				FCAF57D85BD893EA472B7D71 /* Pods-FourSquare-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1184BE1E24ED561F008A4820 /* Build configuration list for PBXNativeTarget "FourSquare-ios" */;
 			buildPhases = (
+				D7C7D0D34FED8F00BC85B901 /* [CP] Check Pods Manifest.lock */,
 				1184BE0324ED561B008A4820 /* Sources */,
 				1184BE0424ED561B008A4820 /* Frameworks */,
 				1184BE0524ED561B008A4820 /* Resources */,
+				FADFA594AA626864FF36BB60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +359,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D7C7D0D34FED8F00BC85B901 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FourSquare-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FADFA594AA626864FF36BB60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FourSquare-ios/Pods-FourSquare-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1184BE0324ED561B008A4820 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -299,7 +421,9 @@
 				112DEB6024EEBEFE006E42AB /* JSONEncoderExtension.swift in Sources */,
 				112DEB3E24EEBB25006E42AB /* TableView.swift in Sources */,
 				112DEB5224EEBDA8006E42AB /* NibLoadableView.swift in Sources */,
+				112DEB6824EEBFA4006E42AB /* Logger.swift in Sources */,
 				112DEB3C24EEBB03006E42AB /* SectionViewModel.swift in Sources */,
+				112DEB6F24EEC005006E42AB /* NetworkErrors.swift in Sources */,
 				112DEB6224EEBF30006E42AB /* UIBezierPathExtension.swift in Sources */,
 				112DEB4224EEBB53006E42AB /* CellViewModel.swift in Sources */,
 				1184BE1524ED561B008A4820 /* FourSquare_ios.xcdatamodeld in Sources */,
@@ -438,6 +562,7 @@
 		};
 		1184BE1F24ED561F008A4820 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C60F3B6248D26A1BD3CA57B /* Pods-FourSquare-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +584,7 @@
 		};
 		1184BE2024ED561F008A4820 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCAF57D85BD893EA472B7D71 /* Pods-FourSquare-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
