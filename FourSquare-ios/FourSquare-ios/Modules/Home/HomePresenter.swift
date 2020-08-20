@@ -39,8 +39,8 @@ class HomePresenter {
 
 // MARK: Private
 private extension HomePresenter {
-    func createSections(places: [Venue]) -> SectionViewModel {
-           let cells = places.map { ItemCellViewModel(place: $0) }
+    func createSections(venues: [Venue]) -> SectionViewModel {
+        let cells = venues.map { ItemCellViewModel(venue: $0) }
            let section = DefaultSection(cells: cells)
            return section
        }
@@ -64,7 +64,7 @@ extension HomePresenter: HomePresentationLogic {
        }
        
        func presentData(response: Home.List.Response) {
-           let section = createSections(places: response.places)
+           let section = createSections(venues: response.venues)
            let viewModel = Home.List.ViewModel(section: [section])
            DispatchQueue.main.async {
                self.viewController?.displayList(viewModel: viewModel)
