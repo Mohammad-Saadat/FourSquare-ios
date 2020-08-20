@@ -30,4 +30,10 @@ final class HomeService {
 // MARK: - Methods
 
 // MARK: Public
-extension HomeService {}
+extension HomeService {
+    func getVenuesFromRemote(params: VenueParams) -> Promise<ForSquareObject> {
+        return networkManager
+            .request(HomeEndpoint.getVenues(params: params))
+            .recover(NetworkErrors.parseError)
+    }
+}
