@@ -44,7 +44,7 @@ extension CoreDataService {
     }
     
     func deleteAllRecords() throws {
-        let deleteFetch: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest<NSFetchRequestResult>(entityName: "Place")
+        let deleteFetch: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest<NSFetchRequestResult>(entityName: "Venue")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
         try context.execute(deleteRequest)
     }
