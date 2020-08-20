@@ -88,7 +88,41 @@ private extension HomeInteractor {
 extension HomeInteractor {}
 
 // MARK: - Business Logics
-extension HomeInteractor: HomeBusinessLogic {}
+extension HomeInteractor: HomeBusinessLogic {
+    func refreshPage(request: Home.List.Request) {
+        self.locationManager.handleLocationManagerState()
+        let currentLocation = locationManager.getCurrentLocation()
+        guard let lat = currentLocation.lat,
+            let lng = currentLocation.lng else { return }
+        fetchPlacesWithParams(latitude: lat, longitude: lng)
+    }
+    
+    func getPlaceFromDB(request: Home.List.Request) {
+        self.worker.fetchPlacesFromDB()
+    }
+    
+    func fetchNextPage(request: Home.pagination.Request) {
+        let currentLocation = locationManager.getCurrentLocation()
+        guard let lat = currentLocation.lat,
+            let lng = currentLocation.lng else { return }
+        let nextPage = request.currentPage + 1
+        let newParams = VenueParams(latitude: lat, longitude: lng, page: nextPage)
+        self.worker.fetchForPagination(params: newParams)
+    }
+    
+    func settingButtonTappedOnLocationAlert(request: Home.LocationAlert.Request) {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl) { (_) in }
+        }
+    }
+    
+    func startHandleLocation(request: Home.Location.Request) {
+        locationManager.startHandleLocation()
+    }
+}
 
 // MARK: - HomeWorker Delegate
 extension HomeInteractor: HomeWorkerDelegate {
