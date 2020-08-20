@@ -1,10 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FourSquare_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="ioL-MJ-XeC" id="e15-8s-gYb"/>
+                <outlet property="view" destination="N8L-vq-1AF" id="gmL-1K-qQY"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="N8L-vq-1AF">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ioL-MJ-XeC" customClass="DefaultTableView" customModule="TRB" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ioL-MJ-XeC" firstAttribute="top" secondItem="h10-eF-oXa" secondAttribute="top" id="Qb7-qF-MJb"/>
+                <constraint firstItem="h10-eF-oXa" firstAttribute="bottom" secondItem="ioL-MJ-XeC" secondAttribute="bottom" id="fXp-4b-bF5"/>
+                <constraint firstItem="ioL-MJ-XeC" firstAttribute="leading" secondItem="N8L-vq-1AF" secondAttribute="leading" id="sJU-KG-fyR"/>
+                <constraint firstAttribute="trailing" secondItem="ioL-MJ-XeC" secondAttribute="trailing" id="whD-ow-GG5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="h10-eF-oXa"/>
+            <point key="canvasLocation" x="51" y="116"/>
+        </view>
     </objects>
 </document>
