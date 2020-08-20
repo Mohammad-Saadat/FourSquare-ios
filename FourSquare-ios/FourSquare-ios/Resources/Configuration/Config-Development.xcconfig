@@ -8,3 +8,31 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+
+// ==========================
+// MARK: - Internal Variables
+// ==========================
+FORWARD_SLASH = /
+
+// ==================
+// MARK: - App Config
+// ==================
+PRODUCT_NAME = TRB
+PRODUCT_DISPLAY_NAME = DEV_$(PRODUCT_NAME)
+PRODUCT_SHORT_VERSION = 1.0.0
+PRODUCT_VERSION = 1
+
+// ====================
+// MARK: - Build Config
+// ====================
+OTHER_SWIFT_FLAGS = '$(inherited)' '-Xfrontend' '-warn-long-function-bodies=200' '-Xfrontend' '-warn-long-expression-type-checking=200'
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+ENABLE_BITCODE = NO
+// ============
+// MARK: - URLs
+// ============
+BASE_URL = https:$(FORWARD_SLASH)/api.foursquare.com/v2
+
+CLIENT_ID = NMW0BLZYH4MHPIKQIBY3R0AUC0E01DUOCKC4FTNWALTEOUNS
+
+CLIENT_SECRET = 0R0AWQYJCE0WW4GLMEMGVI05NHPJNH03OPKWZLYPZVRTTLXS
