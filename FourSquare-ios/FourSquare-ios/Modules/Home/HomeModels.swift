@@ -51,7 +51,7 @@ enum Home {
         struct Request {
         }
         struct Response {
-            let places: [Venue]
+            let venues: [Venue]
         }
         struct ViewModel {
             let section: [SectionViewModel]
