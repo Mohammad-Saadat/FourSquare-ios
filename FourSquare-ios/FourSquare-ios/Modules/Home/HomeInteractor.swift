@@ -21,7 +21,7 @@ protocol HomeDataStore {}
 class HomeInteractor: HomeDataStore {
     // MARK: - Object lifecycle
     init(locationManager: LocationManager,
-    worker: TestModuleWorkerLogic,
+    worker: HomeWorkerLogic,
     reachability: Reachability) {
         HomeLogger.logInit(owner: String(describing: HomeInteractor.self))
         self.worker = worker
@@ -39,7 +39,7 @@ class HomeInteractor: HomeDataStore {
     
     // MARK: Public
     var presenter: HomePresentationLogic?
-    var worker: HomeWorkerLogic?
+    var worker: HomeWorkerLogic
     
     // MARK: Private
     private let locationManager: LocationManager
@@ -51,7 +51,7 @@ class HomeInteractor: HomeDataStore {
 // MARK: Private
 private extension HomeInteractor {
     func setDelegates() {
-//        self.worker.setDelegate(with: self)
+        self.worker.setDelegate(with: self)
         self.locationManager.setDelegate(with: self)
         self.reachability.setDelegate(with: self)
     }
@@ -62,3 +62,64 @@ extension HomeInteractor {}
 
 // MARK: - Business Logics
 extension HomeInteractor: HomeBusinessLogic {}
+
+// MARK: - HomeWorker Delegate
+extension HomeInteractor: HomeWorkerDelegate {
+    func stopFooterIndicator() {
+        self.presenter?.hideFooterLoading(response: Home.pagination.Response())
+    }
+    
+    func startFooterIndicator() {
+        self.presenter?.presentFooterLoading(response: Home.pagination.Response())
+    }
+    
+    func handeleError(error: Error) {
+        self.presenter?.presentError(response: Home.ModuleError.Response(error: error))
+    }
+    
+    func startRemoteIndicator() {
+        self.presenter?.presentLoading(response: Home.Loading.Response())
+    }
+    
+    func stopRemoteIndicator() {
+        self.presenter?.hideLoading(response: Home.Loading.Response())
+    }
+    
+    func recievedFromDataBase(places: [Place]) {
+        self.presenter?.presentData(response: Home.List.Response(places: places))
+    }
+}
+
+// MARK: - Reachability Delegate
+extension HomeInteractor: ReachabilityDelegate {
+    func statusChangedToNotReachable() {
+        if UserDefaults.standard.venueParams != nil {
+            let error = NetworkErrors.noNetworkConnectivity
+            let reponse = HomeLogger.ModuleError.Response(error: error)
+            self.presenter?.presentError(response: reponse)
+        }
+    }
+    
+    func statusChangedToReachable() {
+        let currentLocation = locationManager.getCurrentLocation()
+        guard let latitude = currentLocation.lat,
+            let longitude = currentLocation.lng else { return }
+        // first get from database
+        self.checkPlaceParamsInDisk(latitude: latitude, longitude: longitude)
+    }
+}
+
+// MARK: - LocationManager Delegate
+extension HomeInteractor: LocationManagerDelegate {
+    func updateLocationManager(latitude: String, longitude: String) {
+        HomeLogger.log(text: "latitude = \(latitude)")
+        HomeLogger.log(text: "longitude = \(longitude)")
+        self.checkPlaceParamsInDisk(latitude: latitude, longitude: longitude)
+    }
+    
+    func showPermisionLocationAlert() {
+        self.presenter?.hideLoading(response: Home.Loading.Response())
+        self.presenter?.hideFooterLoading(response: Home.pagination.Response())
+        self.presenter?.presentPermisionLocationAlert(response: Home.Location.Response())
+    }
+}
