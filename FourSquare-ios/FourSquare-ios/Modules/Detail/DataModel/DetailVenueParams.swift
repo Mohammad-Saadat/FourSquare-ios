@@ -16,11 +16,10 @@ struct DetailVenueParams: Codable {
 
 extension DetailVenueParams {
      var v: String {
-        let currentDate = Date()
+        let date = Calendar.current.date(byAdding: .year, value: -2, to: Date()) ?? Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYYMMDD"
-        let currentDateString = dateFormatter.string(from: currentDate)
-//        return currentDateString
-        return "20180323"
+        let currentDateString = dateFormatter.string(from: date)
+        return currentDateString
     }
 }
