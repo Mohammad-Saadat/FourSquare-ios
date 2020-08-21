@@ -187,6 +187,7 @@ extension HomeViewController: HomeDisplayLogic {
     func displayError(viewModel: Home.ModuleError.ViewModel) {
         let okAction = UIAlertAction.init(title: "OK".localized, style: .cancel, handler: nil)
         self.presentMessege(title: "Error".localized, message: viewModel.error.localizedDescription, additionalActions: okAction, preferredStyle: .alert)
+        self.hideLoading()
     }
 }
 
