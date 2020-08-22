@@ -2,7 +2,7 @@
 //  Venue+CoreDataProperties.swift
 //  
 //
-//  Created by mohammadSaadat on 5/30/1399 AP.
+//  Created by mohammad on 8/22/20.
 //
 //
 
