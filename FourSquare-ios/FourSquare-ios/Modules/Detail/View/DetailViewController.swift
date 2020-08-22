@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 protocol DetailDisplayLogic: class {
     func displayError(viewModel: Detail.ModuleError.ViewModel)
@@ -165,8 +166,13 @@ extension DetailViewController: DetailDisplayLogic {
     }
     
     func displayError(viewModel: Detail.ModuleError.ViewModel) {
-        let okAction = UIAlertAction.init(title: "OK".localized, style: .cancel, handler: nil)
-        self.presentMessege(title: "Error".localized, message: viewModel.error.localizedDescription, additionalActions: okAction, preferredStyle: .alert)
+        if let error = viewModel.error as? NetworkErrors,
+            case NetworkErrors.noNetworkConnectivity = error {
+            self.view.makeToast(error.localizedDescription, duration: 2.0, position: .bottom)
+        } else {
+            let okAction = UIAlertAction.init(title: "OK".localized, style: .cancel, handler: nil)
+            self.presentMessege(title: "Error".localized, message: viewModel.error.localizedDescription, additionalActions: okAction, preferredStyle: .alert)
+        }
     }
     
     func displayLoading() {

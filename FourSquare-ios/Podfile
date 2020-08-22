@@ -17,6 +17,10 @@ target 'FourSquare-ios' do
 
   # Pods for FourSquare-ios
 
+  #########
+  # Toast #
+  #########
+  pod 'Toast-Swift', '~> 5.0.1'
  
   #########
   # Media #

@@ -1,8 +1,8 @@
 PODS:
   - Alamofire (5.2.2)
-  - Kingfisher (5.15.0):
-    - Kingfisher/Core (= 5.15.0)
-  - Kingfisher/Core (5.15.0)
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -16,11 +16,13 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Kingfisher
   - Moya
   - PromiseKit
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
@@ -28,13 +30,15 @@ SPEC REPOS:
     - Kingfisher
     - Moya
     - PromiseKit
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: cb656baa5baac7a9287ef34c3e1d5dc21d3cd5dc
+PODFILE CHECKSUM: 39756a74df6cb7ac4c8cbf82251f5b770d14beaf
 
 COCOAPODS: 1.9.3
