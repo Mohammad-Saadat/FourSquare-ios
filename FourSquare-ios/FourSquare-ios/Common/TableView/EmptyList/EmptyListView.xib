@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yBL-Ya-Wo6" customClass="EmptyListView" customModule="TRB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="639"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9ox-fk-Yrf">
+                    <rect key="frame" x="24" y="218" width="366" height="203"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elj-9v-5kA">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="100"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-Et-yIf">
+                                    <rect key="frame" x="148" y="15" width="70" height="70"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="1fO-rH-bVi"/>
+                                        <constraint firstAttribute="height" constant="70" id="unz-j6-7IF"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="MpS-Et-yIf" firstAttribute="centerY" secondItem="elj-9v-5kA" secondAttribute="centerY" id="44z-5P-GtF"/>
+                                <constraint firstItem="MpS-Et-yIf" firstAttribute="centerX" secondItem="elj-9v-5kA" secondAttribute="centerX" id="86e-FF-tbK"/>
+                                <constraint firstAttribute="height" constant="100" id="lT0-nn-Mki"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIB-mM-HLD">
+                            <rect key="frame" x="0.0" y="108" width="366" height="21"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Tk-KR-ePY">
+                            <rect key="frame" x="0.0" y="137" width="366" height="66"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Q9-bS-UOa">
+                                    <rect key="frame" x="160" y="16" width="46" height="34"/>
+                                    <color key="backgroundColor" name="AppGrey-Light"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="OQN-cn-bCv"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" name="AppViolet-Button"/>
+                                    </state>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="OQN-cn-bCv"/>
+                                        </mask>
+                                    </variation>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="BHb-cW-IT1"/>
+                                <constraint firstItem="5Q9-bS-UOa" firstAttribute="centerX" secondItem="3Tk-KR-ePY" secondAttribute="centerX" id="FTx-Hu-L46"/>
+                                <constraint firstItem="5Q9-bS-UOa" firstAttribute="centerY" secondItem="3Tk-KR-ePY" secondAttribute="centerY" id="OEf-Sv-9TP"/>
+                                <constraint firstItem="5Q9-bS-UOa" firstAttribute="top" secondItem="3Tk-KR-ePY" secondAttribute="top" constant="16" id="eNQ-rF-oEK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9ox-fk-Yrf" firstAttribute="centerX" secondItem="yBL-Ya-Wo6" secondAttribute="centerX" id="48U-l4-UIy"/>
+                <constraint firstItem="9ox-fk-Yrf" firstAttribute="centerY" secondItem="yBL-Ya-Wo6" secondAttribute="centerY" id="5m9-ul-KOe"/>
+                <constraint firstItem="9ox-fk-Yrf" firstAttribute="top" secondItem="Mui-nt-N1m" secondAttribute="top" constant="130" id="Agu-Lw-quK"/>
+                <constraint firstItem="9ox-fk-Yrf" firstAttribute="leading" secondItem="Mui-nt-N1m" secondAttribute="leading" constant="24" id="ErD-0e-IUs"/>
+                <constraint firstItem="Mui-nt-N1m" firstAttribute="trailing" secondItem="9ox-fk-Yrf" secondAttribute="trailing" constant="24" id="VnX-vH-ERe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Mui-nt-N1m"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Agu-Lw-quK"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="button" destination="5Q9-bS-UOa" id="E04-u6-I5m"/>
+                <outlet property="buttonContainer" destination="3Tk-KR-ePY" id="25n-hm-caT"/>
+                <outlet property="emptyText" destination="QIB-mM-HLD" id="8fR-Qp-718"/>
+                <outlet property="icon" destination="MpS-Et-yIf" id="Am2-fZ-ato"/>
+                <outlet property="imageContainer" destination="elj-9v-5kA" id="sXB-Sf-mkg"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="64.620535714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppGrey-Light">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppViolet-Button">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
