@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 protocol HomeDisplayLogic: class {
     func displayPermisionLocationAlert(viewModel: Home.Location.ViewModel)
@@ -185,8 +186,13 @@ extension HomeViewController: HomeDisplayLogic {
     }
     
     func displayError(viewModel: Home.ModuleError.ViewModel) {
-        let okAction = UIAlertAction.init(title: "OK".localized, style: .cancel, handler: nil)
-        self.presentMessege(title: "Error".localized, message: viewModel.error.localizedDescription, additionalActions: okAction, preferredStyle: .alert)
+        if let error = viewModel.error as? NetworkErrors,
+            case NetworkErrors.noNetworkConnectivity = error {
+            self.view.makeToast(error.localizedDescription, duration: 2.0, position: .bottom)
+        } else {
+            let okAction = UIAlertAction.init(title: "OK".localized, style: .cancel, handler: nil)
+            self.presentMessege(title: "Error".localized, message: viewModel.error.localizedDescription, additionalActions: okAction, preferredStyle: .alert)
+        }
         self.hideLoading()
     }
 }
