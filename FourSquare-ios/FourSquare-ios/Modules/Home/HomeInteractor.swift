@@ -45,6 +45,9 @@ class HomeInteractor: HomeDataStore {
     // MARK: Private
     private let locationManager: LocationManager
     private let reachability: Reachability
+    
+    // constraint for change location
+    private let constraintDistance: Double = 100
 }
 
 // MARK: - Methods
@@ -66,9 +69,9 @@ private extension HomeInteractor {
         let newCoordinate = CLLocation(latitude: latitude.double, longitude: longitude.double)
         let oldCoordinate = CLLocation(latitude: params.latitude.double, longitude: params.longitude.double)
         let distanceInMeters = newCoordinate.distance(from: oldCoordinate)
+        
         HomeLogger.log(text: "distanceInMeters = \(distanceInMeters)")
-        if distanceInMeters >= 10 {
-            // in success remove all last palces
+        if distanceInMeters >= constraintDistance {
             self.fetchPlacesWithParams(latitude: latitude, longitude: longitude)
         }
     }
